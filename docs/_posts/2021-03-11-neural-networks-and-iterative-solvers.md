@@ -99,7 +99,7 @@ $$\nabla_{B} \mathcal{L}$$
 
 
 The approach here is to directly back-propagate from the loss function $$\mathcal{L}$$, through
-the numerical solver, to the parameters of the preconditioner $$W$$ and $$\b$$.
+the numerical solver, to the parameters of the preconditioner $$W$$ and $$b$$.
 We are not working with an offline training and test-data set, but the data is
 taken directly from the numerical calculations. This way we directly capture the
 reaction of the numerical solver to updates proposed by gradient descent. 
@@ -338,7 +338,7 @@ By putting the solver in the loop, the training and inference steps couple to th
 simulation in a very simple way. 
 
 One drawback of the method as written here is that we are limiting ourselfes to initial
-guesses $$x \sim 0$. This is due to the requirement of the Gauss-Seidel scheme that the
+guesses $$x \sim 0$$. This is due to the requirement of the Gauss-Seidel scheme that the
 linear system is positive definite. In more practical settings this can be circumvented
 by either using different parameters to be passed to $$P$$ than $$x$$. Alternatively
 one can use an iterative solver that doesn't pose such restrictions, such as Jacobian-Free
