@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Machine-learned preconditioners"
+title: "Machine-learned preconditioners - Part 1"
 date: 2021-03-02 11:56:22 -0400
 categories: jekyll update
 use_math: true
@@ -111,8 +111,6 @@ packges, such as [Zygote](https://fluxml.ai/Zygote.jl/latest/).
 
 
 ### Implementation
-
-
 
 
 
