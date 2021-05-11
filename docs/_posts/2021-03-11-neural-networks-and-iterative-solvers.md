@@ -276,7 +276,7 @@ end
 
 A plot says many words, so here we go
 
-![Trained preconditioner]({{ site.url}}/assets/images/nn_precond_iteration_error.png)
+![Trained preconditioner]({{ site.url}}/assets/images/nn_precond/GS_iteration_error.png)
 
 
 The plot shows the average residual to the true solution vector as a function of
