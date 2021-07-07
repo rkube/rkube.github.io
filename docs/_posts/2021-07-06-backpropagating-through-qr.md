@@ -246,7 +246,6 @@ res1_V1_fd = FiniteDifferences.grad(central_fdm(5,1), f1, V1)
 @assert res1_V1_ad[1] ≈ res1_V1_fd[1]
 ```
 
-The most difficult part of implementing 
 
 
 
