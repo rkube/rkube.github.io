@@ -21,7 +21,9 @@ Using Newton's method for this example is trivial and leads to a converged
 solution after only two or three steps, since it converges quadratically.
 A quasi-Newton method on the other hand converges only linearly. And we
 aim to improve on that convergence behaviour by using a machine-learned
-preconditioner.
+preconditioner. Now, preconditioners are usually used to accelerate convergence of 
+linear solvers, like GMRES. And I don't claim that they are generally useful for
+non-linear systems. So we do it just to see if this works in principle.
 
 
 
