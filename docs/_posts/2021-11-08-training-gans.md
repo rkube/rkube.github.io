@@ -23,7 +23,7 @@ I am taking a starting point in the vanilla GAN implementation on the
 [FluxML website](https://fluxml.ai/tutorials/2021/10/14/vanilla-gan.html). This
 implementation works and the trained generator indeed generates images that
 look indistinguishable from images belonging to the MNIST dataset.
-But how do we arrive there? Why are the learning rates chosen as $$\eta = 2 \times 10^{-4}$? IS the `leakyrelu` the optimal activation function or does it perform
+But how do we arrive there? Why are the learning rates chosen as $$\eta = 2 \times 10^{-4}$$? IS the `leakyrelu` the optimal activation function or does it perform
 on-par with `relu` in some regime? To answer these questions we need a code that 
 quickly allows us to change these parameters. 
 
