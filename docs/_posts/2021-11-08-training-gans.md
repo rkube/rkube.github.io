@@ -116,10 +116,10 @@ That's it. Now I can access the single command line arguments via `args[lr_dscr]
 Keeping track of the model performance while training is crucial when performing
 parameter scans. For the vanilla GAN alone I defined 10 parameters that can be
 varied. Letting each parameter assume only two distinct values this allows for
-1024 combinations. Julia's (logging facilities)[https://github.com/JuliaLogging]
+1024 combinations. Julia's [logging facilities(https://github.com/JuliaLogging)
 provide means to systematicallylog model training for a large hyperparameter scan.
 
-In particular, we can use (TensorBoardLogger.jl)[https://github.com/JuliaLogging/TensorBoardLogger.jl]. (TensorBoard)[https://www.tensorflow.org/tensorboard]
+In particular, we can use [TensorBoardLogger.jl](https://github.com/JuliaLogging/TensorBoardLogger.jl). [TensorBoard](https://www.tensorflow.org/tensorboard)
 provides a visualization of training and includes numerous useful features, such
 as visualization of loss curves, displaying of model output images and more. To
 use TensorBoardLogger.jl in my code I have to include the module, instantiate
