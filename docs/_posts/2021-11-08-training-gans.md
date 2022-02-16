@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Training GANs in Julia's Flux"
-data: 2021-11-07 20:00:00 -0400
+date: 2021-11-07 20:00:00 -0400
 categories: julia gan 
 use_math: true
 math_engine: mathjax
