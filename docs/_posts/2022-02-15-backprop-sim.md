@@ -98,10 +98,12 @@ sum_vals = similar(t_vals)
 sum_vals_grad = similar(t_vals)
 ```
 
-And to find the gradient, we first evaluate `int_prof` for a given value of t.
+To find the gradient, we first evaluate `int_prof` for a given value of t.
 Then we call `gradient(int_prof, t)` on this call. The return value is just the
-gradient $$\partial N / \partial t$$. Doing this in a loop evaluates the derivative 
-for many values of t 
+gradient $$\partial N / \partial t$$. Thist functionality is just Zygote's
+[gradient](https://fluxml.ai/Zygote.jl/latest/#Taking-Gradients-1) doing it's 
+work but on a more complicated example than in the documentation. Note that
+`gradient` returns a tuple where the actual gradient is the first element.
 
 ```
 for tidx ∈ tvals
