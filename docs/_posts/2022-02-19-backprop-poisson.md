@@ -255,9 +255,13 @@ example, both solvers perform well.
 ![Comparison of dI/dt obtained through AD and finite differences]({{site.url}}/assets/images/autodiff_examples/dIdt_FD_AD.png)
 
 
-A final thing to look at is speed. Using Benchmarktool we can evaluate the performance of
-backpropagating through either the finite difference and the spectral solver:
+A final thing to look at is speed. Using 
+[Benchmarktool](https://github.com/JuliaCI/BenchmarkTools.jl)
+we can evaluate the performance of backpropagating through either the finite difference and 
+the spectral solver:
+
 ```julia
+using BenchmarkTools
 julia> @benchmark gradient(int_prof_sp, t)[1]
 BenchmarkTools.Trial: 
   memory estimate:  141.64 KiB
