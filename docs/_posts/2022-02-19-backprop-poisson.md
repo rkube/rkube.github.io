@@ -23,6 +23,7 @@ $$\begin{align}
 
 The plot below shows how the peak of the amplitude varies with $$t$$:
 ![Profile variation with t]({{site.url}}/assets/images/autodiff_examples/rho_with_t.png)
+
 We see that for $$t = 0.2\ldots2.0$$ the peak decreases in amplitude and increases
 as $$t$$ increases from 2.0 to 4.0. 
 
