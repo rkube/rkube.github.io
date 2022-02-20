@@ -253,3 +253,40 @@ example, both solvers perform well.
 
 
 ![Comparison of dI/dt obtained through AD and finite differences]({{site.url}}/assets/images/autodiff_examples/dIdt_FD_AD.png)
+
+
+A final thing to look at is speed. Using Benchmarktool we can evaluate the performance of
+backpropagating through either the finite difference and the spectral solver:
+```julia
+julia> @benchmark gradient(int_prof_sp, t)[1]
+BenchmarkTools.Trial: 
+  memory estimate:  141.64 KiB
+  allocs estimate:  752
+  --------------
+  minimum time:     110.582 μs (0.00% GC)
+  median time:      118.785 μs (0.00% GC)
+  mean time:        139.315 μs (9.20% GC)
+  maximum time:     12.583 ms (68.76% GC)
+  --------------
+  samples:          10000
+  evals/sample:     1
+
+julia> @benchmark gradient(int_prof_fd, t)[1]
+BenchmarkTools.Trial: 
+  memory estimate:  6.07 MiB
+  allocs estimate:  170758
+  --------------
+  minimum time:     28.093 ms (0.00% GC)
+  median time:      32.338 ms (0.00% GC)
+  mean time:        35.562 ms (3.07% GC)
+  maximum time:     104.050 ms (0.00% GC)
+  --------------
+  samples:          141
+  evals/sample:     1
+```
+
+The mean time it takes to backprop through the finite difference solver is about 250 times
+larger than for the spectral solver. Given that the spectral solver is cheaper to evaluate,
+it doesn't require to solve a linear system, this is not completely unexpected.
+
+
